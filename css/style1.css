@@ -101,18 +101,23 @@
    background: #fff;
 }
 
-.form-container form .form-btn{
+.form-container form .form-btn {
    background: #fbd0d9;
-   color:crimson;
+   color: crimson;
    text-transform: capitalize;
    font-size: 20px;
    cursor: pointer;
+   border: none;
+   padding: 10px 30px; /* Adjust padding for better button appearance */
+   margin: 0 5px;
+   border-radius: 5px; /* Add border-radius for rounded corners */
 }
 
-.form-container form .form-btn:hover{
+.form-container form .form-btn:hover {
    background: crimson;
-   color:#fff;
+   color: #fff;
 }
+
 
 .form-container form p{
    margin-top: 10px;

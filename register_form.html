@@ -9,24 +9,30 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style1.css">
+    <script src="js/auth/register.js" defer></script>
+
 </head>
 
 <body>
 
     <div class="form-container">
-
-        <form id="registerForm">
+        <form id="form_register">
             <h3>Register Now</h3>
+            <div class="alert alert-success" role="alert">
+            </div>
+            <div class="alert alert-danger" role="alert">
+            </div>
             <div id="errorContainer"></div>
-            <input type="text" name="name" id="name" required placeholder="Enter your name">
+            <input type="text" name="firstname" id="first_name" required placeholder="Enter your first name">
+            <input type="text" name="lastname" id="last_name" required placeholder="Enter your last name">
             <input type="email" name="email" id="email" required placeholder="Enter your email">
             <input type="password" name="password" id="password" required placeholder="Enter your password">
-            <input type="password" name="cpassword" id="cpassword" required placeholder="Confirm your password">
-            <select name="user_type" id="user_type">
+            <input type="password" name="password_confirmation" id="cpassword" required placeholder="Confirm your password">
+            <!--<select name="user_type" id="user_type">
                 <option value="user">User</option>
                 <option value="admin">Admin</option>
-            </select>
-            <input type="button" value="Register Now" class="form-btn" onclick="submitForm()">
+            </select>-->
+            <button type="submit" class="form-btn">Register Now</button>
             <p>Already have an account? <a href="login.html">Login now</a></p>
         </form>
 
