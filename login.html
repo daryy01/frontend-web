@@ -9,18 +9,23 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style1.css">
+    <script src="js/auth/login.js" defer></script>
 </head>
 
 <body>
 
     <div class="form-container">
 
-        <form id="loginForm">
+        <form id="form_login">
             <h3>Login Now</h3>
+            <div class="alert alert-success" role="alert">
+            </div>
+            <div class="alert alert-danger" role="alert">
+            </div>
             <div id="errorContainer"></div>
             <input type="email" name="email" id="email" required placeholder="Enter your email">
             <input type="password" name="password" id="password" required placeholder="Enter your password">
-            <input type="button" value="Login Now" class="form-btn" onclick="submitForm()">
+            <button type="submit" class="form-btn">Login Now</button>
             <p>Don't have an account? <a href="register_form.html">Register now</a></p>
         </form>
 
