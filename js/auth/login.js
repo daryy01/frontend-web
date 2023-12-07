@@ -1,7 +1,10 @@
-//Form Regis
+import {
+  backendURL,
+  successNotification,
+  errorNotification,
+} from "../utils/utils.js";
 
-const url = "http://backend.test";
-
+//Form Login
 const form_login = document.getElementById("form_login");
 form_login.onsubmit = async (e) => {
   e.preventDefault();
@@ -10,7 +13,7 @@ form_login.onsubmit = async (e) => {
 
   const formData = new FormData(form_login);
 
-  const response = await fetch(url + "/api/login", {
+  const response = await fetch(backendURL + "/api/login", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -35,27 +38,5 @@ form_login.onsubmit = async (e) => {
 
   document.querySelector("#form_login button").disabled = false;
 
-  window.location.pathname = "/index.html";
+  window.location.pathname = "/home.html";
 };
-
-function successNotification(message, seconds) {
-  document.querySelector(".alert-success").classList.remove("d-none");
-  document.querySelector(".alert-success").classList.add("d-block");
-  document.querySelector(".alert-success").innerHTML = message;
-
-  setTimeout(function () {
-    document.querySelector(".alert-success").classList.remove("d-none");
-    document.querySelector(".alert-success").classList.add("d-block");
-  }, seconds * 1000);
-}
-
-function errorNotification(message, seconds) {
-  document.querySelector(".alert-danger").classList.remove("d-none");
-  document.querySelector(".alert-danger").classList.add("d-block");
-  document.querySelector(".alert-danger").innerHTML = message;
-
-  setTimeout(function () {
-    document.querySelector(".alert-danger").classList.remove("d-none");
-    document.querySelector(".alert-danger").classList.add("d-block");
-  }, seconds * 1000);
-}
